@@ -1,0 +1,241 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Management.Automation</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Management.Automation</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="574,2379.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="dashboardText" />
+      <Variable x:TypeArguments="x:String" Name="gpuAppsText" />
+      <Variable x:TypeArguments="x:Object" Name="gpuAppsOutput" />
+      <Variable x:TypeArguments="x:String" Name="ramAppsText" />
+      <Variable x:TypeArguments="x:Object" Name="ramAppsOutput" />
+      <Variable x:TypeArguments="x:String" Name="topAppsText" />
+      <Variable x:TypeArguments="x:Object" Name="topAppsOutput" />
+      <Variable x:TypeArguments="x:String" Name="gpuText" />
+      <Variable x:TypeArguments="x:Object" Name="gpuOutput" />
+      <Variable x:TypeArguments="x:String" Name="jsonText" />
+      <Variable x:TypeArguments="x:String" Name="ramText" />
+      <Variable x:TypeArguments="x:String" Name="cpuText" />
+      <Variable x:TypeArguments="x:Object" Name="ramOutput" />
+      <Variable x:TypeArguments="x:Object" Name="cpuOutput" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:InvokePowerShell x:TypeArguments="x:Object" ContinueOnError="{x:Null}" CommandText="(Get-Counter '\Processor(_Total)\% Processor Time').CounterSamples.CookedValue" DisplayName="Invoke Power Shell" sap:VirtualizedContainerService.HintSize="449.6,112" sap2010:WorkflowViewState.IdRef="InvokePowerShell`1_2" IsScript="True" Output="[cpuOutput]" PowerShellProcess="PowerShellCore">
+      <ui:InvokePowerShell.Parameters>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument" />
+      </ui:InvokePowerShell.Parameters>
+      <ui:InvokePowerShell.PowerShellVariables>
+        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+      </ui:InvokePowerShell.PowerShellVariables>
+    </ui:InvokePowerShell>
+    <Assign sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[cpuText]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[Math.Round(CDbl(DirectCast(cpuOutput, System.Collections.ObjectModel.Collection(Of Object))(0).ToString),2).ToString]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:InvokePowerShell x:TypeArguments="x:Object" ContinueOnError="{x:Null}" CommandText="(Get-Counter '\Memory\% Committed Bytes In Use').CounterSamples.CookedValue" DisplayName="Invoke Power Shell" sap:VirtualizedContainerService.HintSize="449.6,112" sap2010:WorkflowViewState.IdRef="InvokePowerShell`1_4" IsScript="True" Output="[ramOutput]" PowerShellProcess="PowerShellCore">
+      <ui:InvokePowerShell.Parameters>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument" />
+      </ui:InvokePowerShell.Parameters>
+      <ui:InvokePowerShell.PowerShellVariables>
+        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+      </ui:InvokePowerShell.PowerShellVariables>
+    </ui:InvokePowerShell>
+    <Assign sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="Assign_2">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[ramText]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[Math.Round(CDbl(DirectCast(ramOutput, System.Collections.ObjectModel.Collection(Of Object))(0).ToString),2).ToString]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:InvokePowerShell x:TypeArguments="x:Object" ContinueOnError="{x:Null}" CommandText="try { (Get-Counter '\GPU Engine(*)\Utilization Percentage' -ErrorAction Stop).CounterSamples | Where-Object {$_.CookedValue -ge 0} | Measure-Object CookedValue -Sum | Select-Object -ExpandProperty Sum } catch { 0 }" DisplayName="Invoke Power Shell" sap:VirtualizedContainerService.HintSize="449.6,112" sap2010:WorkflowViewState.IdRef="InvokePowerShell`1_6" IsScript="True" Output="[gpuOutput]" PowerShellProcess="PowerShellCore">
+      <ui:InvokePowerShell.Parameters>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument" />
+      </ui:InvokePowerShell.Parameters>
+      <ui:InvokePowerShell.PowerShellVariables>
+        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+      </ui:InvokePowerShell.PowerShellVariables>
+    </ui:InvokePowerShell>
+    <Assign sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="Assign_4">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[gpuText]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[DirectCast(gpuOutput, System.Collections.ObjectModel.Collection(Of Object))(0).ToString]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:InvokePowerShell x:TypeArguments="x:Object" ContinueOnError="{x:Null}" CommandText="$procs = Get-Counter '\Process(*)\% Processor Time'; $result = @(); foreach ($sample in $procs.CounterSamples) { if ($sample.CookedValue -gt 1 -and $sample.InstanceName -notmatch 'idle|_total') { $result += [PSCustomObject]@{ ProcessName = $sample.InstanceName; CPU = [math]::Round($sample.CookedValue / $env:NUMBER_OF_PROCESSORS,2) } } }; $result | Sort-Object CPU -Descending | Select-Object -First 3 | ConvertTo-Json" DisplayName="Invoke Power Shell" sap:VirtualizedContainerService.HintSize="449.6,112" sap2010:WorkflowViewState.IdRef="InvokePowerShell`1_8" IsScript="True" Output="[topAppsOutput]" PowerShellProcess="PowerShellCore">
+      <ui:InvokePowerShell.Parameters>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument" />
+      </ui:InvokePowerShell.Parameters>
+      <ui:InvokePowerShell.PowerShellVariables>
+        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+      </ui:InvokePowerShell.PowerShellVariables>
+    </ui:InvokePowerShell>
+    <Assign sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="Assign_5">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[topAppsText]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[DirectCast(topAppsOutput, System.Collections.ObjectModel.Collection(Of Object))(0).ToString]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:InvokePowerShell x:TypeArguments="x:Object" ContinueOnError="{x:Null}" CommandText="Get-Process | Sort-Object WorkingSet64 -Descending | Select-Object -First 3 @{Name='ProcessName';Expression={$_.ProcessName}}, @{Name='RAM_MB';Expression={[math]::Round($_.WorkingSet64 / 1MB,2)}} | ConvertTo-Json" DisplayName="Invoke Power Shell" sap:VirtualizedContainerService.HintSize="449.6,112" sap2010:WorkflowViewState.IdRef="InvokePowerShell`1_10" IsScript="True" Output="[ramAppsOutput]" PowerShellProcess="PowerShellCore">
+      <ui:InvokePowerShell.Parameters>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument" />
+      </ui:InvokePowerShell.Parameters>
+      <ui:InvokePowerShell.PowerShellVariables>
+        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+      </ui:InvokePowerShell.PowerShellVariables>
+    </ui:InvokePowerShell>
+    <Assign sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="Assign_6">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[ramAppsText]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[DirectCast(ramAppsOutput, System.Collections.ObjectModel.Collection(Of Object))(0).ToString]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:InvokePowerShell x:TypeArguments="x:Object" ContinueOnError="{x:Null}" CommandText="$gpu = Get-Counter '\GPU Engine(*)\Utilization Percentage' -ErrorAction SilentlyContinue; $result = @(); foreach ($sample in $gpu.CounterSamples) { if ($sample.CookedValue -gt 0 -and $sample.InstanceName -match 'pid_') { $parts = $sample.InstanceName -split '_'; $procId = $parts[1]; try { $proc = Get-Process -Id $procId -ErrorAction Stop; $result += [PSCustomObject]@{ ProcessName = $proc.ProcessName; GPU = [math]::Round($sample.CookedValue,2) } } catch {} } }; @($result | Group-Object ProcessName | ForEach-Object { [PSCustomObject]@{ ProcessName = $_.Name; GPU = [math]::Round((($_.Group | Measure-Object GPU -Sum).Sum),2) } } | Sort-Object GPU -Descending | Select-Object -First 3) | ConvertTo-Json" DisplayName="Invoke Power Shell" sap:VirtualizedContainerService.HintSize="449.6,112" sap2010:WorkflowViewState.IdRef="InvokePowerShell`1_12" IsScript="True" Output="[gpuAppsOutput]" PowerShellProcess="PowerShellCore">
+      <ui:InvokePowerShell.Parameters>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument" />
+      </ui:InvokePowerShell.Parameters>
+      <ui:InvokePowerShell.PowerShellVariables>
+        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+      </ui:InvokePowerShell.PowerShellVariables>
+    </ui:InvokePowerShell>
+    <Assign sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="Assign_7">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[gpuAppsText]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String" xml:space="preserve">[If(
+    DirectCast(gpuAppsOutput, System.Collections.ObjectModel.Collection(Of Object)).Count &gt; 0,
+    DirectCast(gpuAppsOutput, System.Collections.ObjectModel.Collection(Of Object))(0).ToString,
+    "[]"
+)]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="Assign_3">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[jsonText]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">["{""cpu"":""" + cpuText + """,""ram"":""" + ramText + """,""gpu"":""" + gpuText + """,""topApps"":" + topAppsText + ",""topRamApps"":" + ramAppsText + ",""topGpuApps"":" + gpuAppsText + "}"]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:WriteTextFile FileName="{x:Null}" Output="{x:Null}" DisplayName="Write Text File" File="[LocalResource.FromPath(&quot;dashboard\\performance.json&quot;)]" sap:VirtualizedContainerService.HintSize="449.6,175.2" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[jsonText]" />
+    <Assign sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="Assign_8">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[dashboardText]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String" xml:space="preserve">["PC PERFORMANCE MONITOR" + Environment.NewLine +
+"======================" + Environment.NewLine +
+"CPU Usage: " + cpuText + "%" + Environment.NewLine +
+"RAM Usage: " + ramText + "%" + Environment.NewLine +
+"GPU Usage: " + gpuText + "%" + Environment.NewLine +
+Environment.NewLine +
+"Top CPU Apps:" + Environment.NewLine +
+topAppsText + Environment.NewLine +
+Environment.NewLine +
+"Top RAM Apps:" + Environment.NewLine +
+ramAppsText + Environment.NewLine +
+Environment.NewLine +
+"Top GPU Apps:" + Environment.NewLine +
+gpuAppsText]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="449.6,113.6" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[dashboardText]" />
+  </Sequence>
+</Activity>

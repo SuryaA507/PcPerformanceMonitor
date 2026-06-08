@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Performance Monitor Dashboard</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <main class="app-shell">
+        <header class="topbar">
+            <div>
+                <p class="eyebrow">Live System Monitor</p>
+                <h1>PC Performance Monitor Dashboard</h1>
+            </div>
+            <div class="status-panel">
+                <span id="connectionDot" class="connection-dot"></span>
+                <div>
+                    <span id="connectionText">Waiting for data</span>
+                    <small id="lastUpdated">Last update: --</small>
+                </div>
+            </div>
+        </header>
+
+        <section class="metric-grid" aria-label="System usage">
+            <article class="metric-card">
+                <div class="metric-header">
+                    <span>CPU</span>
+                    <strong id="cpuText">0%</strong>
+                </div>
+                <div class="progress-track" aria-label="CPU usage">
+                    <div id="cpuBar" class="progress-fill cpu-fill"></div>
+                </div>
+                <p id="cpuHint" class="metric-hint">Total processor usage</p>
+            </article>
+
+            <article class="metric-card">
+                <div class="metric-header">
+                    <span>RAM</span>
+                    <strong id="ramText">0%</strong>
+                </div>
+                <div class="progress-track" aria-label="RAM usage">
+                    <div id="ramBar" class="progress-fill ram-fill"></div>
+                </div>
+                <p id="ramHint" class="metric-hint">Committed memory in use</p>
+            </article>
+
+            <article class="metric-card">
+                <div class="metric-header">
+                    <span>GPU</span>
+                    <strong id="gpuText">0%</strong>
+                </div>
+                <div class="progress-track" aria-label="GPU usage">
+                    <div id="gpuBar" class="progress-fill gpu-fill"></div>
+                </div>
+                <p id="gpuHint" class="metric-hint">Total GPU engine utilization</p>
+            </article>
+        </section>
+
+        <section class="table-grid">
+            <article class="table-card">
+                <div class="section-heading">
+                    <h2>Top CPU Apps</h2>
+                    <span id="cpuAppCount">0 found</span>
+                </div>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Application</th>
+                                <th>CPU</th>
+                            </tr>
+                        </thead>
+                        <tbody id="topCpuTable">
+                            <tr><td colspan="2">Waiting for UiPath data...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+
+            <article class="table-card">
+                <div class="section-heading">
+                    <h2>Top RAM Apps</h2>
+                    <span id="ramAppCount">0 found</span>
+                </div>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Application</th>
+                                <th>Memory</th>
+                            </tr>
+                        </thead>
+                        <tbody id="topRamTable">
+                            <tr><td colspan="2">Waiting for UiPath data...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+
+            <article class="table-card wide-card">
+                <div class="section-heading">
+                    <h2>Apps Using GPU</h2>
+                    <span id="gpuAppCount">0 found</span>
+                </div>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Application</th>
+                                <th>GPU Engine</th>
+                                <th>Usage</th>
+                            </tr>
+                        </thead>
+                        <tbody id="gpuAppsTable">
+                            <tr><td colspan="3">Waiting for UiPath data...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+        </section>
+
+        <section class="debug-card">
+            <div class="section-heading">
+                <h2>Debug Log</h2>
+                <div class="button-group">
+                    <button id="exportCsvButton" type="button">Export CSV</button>
+                    <button id="exportExcelButton" type="button">Export Excel</button>
+                    <button id="refreshButton" type="button">Refresh now</button>
+                </div>
+            </div>
+            <pre id="debugLog">Dashboard initialized.</pre>
+        </section>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+</html>

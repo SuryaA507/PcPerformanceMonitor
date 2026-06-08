@@ -1,0 +1,27 @@
+{"cpu":"33.14","ram":"66.28","gpu":"0","topApps":[
+  {
+    "ProcessName": "uipath.executor",
+    "CPU": 4.35
+  },
+  {
+    "ProcessName": "system",
+    "CPU": 1.28
+  },
+  {
+    "ProcessName": "msmpeng",
+    "CPU": 1.15
+  }
+],"topRamApps":[
+  {
+    "ProcessName": "chrome",
+    "RAM_MB": 773.26
+  },
+  {
+    "ProcessName": "UiPath.Studio.Project",
+    "RAM_MB": 669.3
+  },
+  {
+    "ProcessName": "chrome",
+    "RAM_MB": 561.84
+  }
+],"topGpuApps":[]}
